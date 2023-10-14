@@ -1,0 +1,11 @@
+Syntay for Data Attribute:
+
+-> a data attribute is just an HTML attribute
+  -> follows the same syntax rules
+
+data-product-name="${product.name}"
+
+! Data attribute has to start with data-
+
+Purpose of data attribute: Attach any information to an element,
+      like product name or product image or product price etc.

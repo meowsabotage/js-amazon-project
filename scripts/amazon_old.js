@@ -48,7 +48,7 @@ products.forEach((product) => {
     </div>
 
     <button class="add-to-cart-button button-primary js-add-to-cart"
-    data-product-id="${product.id}">
+    data-product-name="${product.name}">
       Add to Cart
     </button>
   </div>
@@ -68,11 +68,11 @@ products.forEach((product) => {
         //important Kebab-case (product-name) gets converted into camelcase productName
         //console.log(button.dataset.productName);
         //works like an object 
-        const productId = button.dataset.productId;      
+        const productName = button.dataset.productName;      
 
         let matchingItem;
         cart.forEach((item) => {
-          if(productId === item.productId){
+          if(productName === item.productName){
             matchingItem = item;
 
           }
@@ -82,7 +82,7 @@ products.forEach((product) => {
           matchingItem.quantity += 1;
         } else {
           cart.push({
-            productId: productId,
+            productName: productName,
             quantity: 1
           })  
         }
