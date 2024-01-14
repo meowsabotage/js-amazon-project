@@ -68,7 +68,7 @@ products.forEach((product) => {
         //important Kebab-case (product-name) gets converted into camelcase productName
         //console.log(button.dataset.productName);
         //works like an object 
-        const productId = button.dataset.productId;      
+        const {productId} = button.dataset;      
         let matchingItem;
         const selectedAmount = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
         
@@ -83,7 +83,7 @@ products.forEach((product) => {
           matchingItem.quantity += selectedAmount;
         } else {
           cart.push({
-            productId: productId,
+            productId,
             quantity: 1
           })  
         }
